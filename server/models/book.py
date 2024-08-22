@@ -17,14 +17,12 @@ class Book(Document):
         name = "books_collection"
 
     class Config:
-        json_schema_extra = {
-            "example": {
-                "title": "name",
-                "author": "name",
-                "published_year": "year",
-                "review": "review"
-            }
-        }
+        json_schema_extra = {"example": {"title": "name",
+                                         "author": "name",
+                                         "published_year": "year",
+                                         "review": "review"
+                                         }
+                             }
 
 
 class UpdateBook(BaseModel):
